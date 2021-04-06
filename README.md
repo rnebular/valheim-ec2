@@ -98,10 +98,9 @@ sudo systemctl start valheim
 sudo systemctl status valheim
 
 
-(if using an extra volume)
-# Format and mount game storage drive, if using another volume for storage
-# Your device name might be something other than /dev/xvdb, so edit the lines
-# accordingly
+### If using an extra volume
+Format and mount game storage drive, if using another volume for storage Your device name might be something other than /dev/xvdb, so edit the lines accordingly:
+
 mkfs.ext4 /dev/xvdb
 echo "/dev/xvdb   /opt/games  ext4    defaults,noatime  1   1" >>/etc/fstab
 mount /opt/games
