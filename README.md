@@ -4,6 +4,8 @@ Using EC2 to run Valheim Dedicated Server
 I did all of this as the `ec2-user` user on a fresh Amazon Linux 2 instance. I followed along with this guide mostly:
 https://gameplay.tips/guides/9765-valheim.html
 
+Next mission, see if I can make this run as a container :)
+
 ## "user data" scripting (basically stuff to run on fresh instance):
 ```
 sudo yum update -y

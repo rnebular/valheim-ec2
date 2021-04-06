@@ -1,4 +1,5 @@
 # simple script to wait for 5 minutes and then shut down the Valheim server.
+Write-Host "Waiting for 5 minutes, then shut down the server."
 Start-Sleep 300
 
 Write-Host "Shutting down Valhiem instance..."
