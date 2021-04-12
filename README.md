@@ -5,6 +5,7 @@ I did all of this as the `ec2-user` user on a fresh Amazon Linux 2 instance. I f
 https://gameplay.tips/guides/9765-valheim.html
 
 Next mission, see if I can make this run as a container :)
+https://github.com/lloesche/valheim-server-docker
 
 ## "user data" scripting (basically stuff to run on fresh instance):
 ```
