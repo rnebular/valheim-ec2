@@ -1,6 +1,7 @@
 # simple script to wait for 5 minutes and then shut down the Valheim server.
-Write-Host "Waiting for 5 minutes, then shut down the server."
-Start-Sleep 300
+$date = Get-Date
+Write-Host "$date - Waiting for 20 minutes to fully wait for auto-save, then shut down the server."
+Start-Sleep 1200
 
 Write-Host "Shutting down Valhiem instance..."
 aws ec2 stop-instances --instance-ids i-079dbf837d3ea8d70
