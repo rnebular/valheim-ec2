@@ -1,0 +1,15 @@
+[Unit]
+Description=Valheim service
+Wants=network.target
+After=syslog.target network-online.target
+
+[Service]
+Type=simple
+Restart=on-failure
+RestartSec=10
+User=ec2-user
+WorkingDirectory=/games/Valheim
+ExecStart=/games/Valheim/start_rnebular_valheim.sh
+
+[Install]
+WantedBy=multi-user.target
