@@ -4,21 +4,20 @@ Using EC2 to run Valheim Dedicated Server
 I did all of this as the `ec2-user` user on a fresh Amazon Linux 2 instance. I followed along with this guide mostly:
 https://gameplay.tips/guides/9765-valheim.html
 
+- NOTE: Add the `EC2-S3ReadOnly` IAM role to the instance. This is an IAM role I built in my account previously.
+
 Next mission, see if I can make this run as a container :)
 https://github.com/lloesche/valheim-server-docker
 
 ## "user data" scripting (basically stuff to run on fresh instance):
 - init.sh
 
-## edit start_rnebular_valheim.sh if needed
-- start_rnebular_valheim.sh
+## edit start_rnebular_valheim.sh if needed (change password), upload to s3
+- `aws s3 cp .\start_rnebular_valheim.sh s3://8dot3/valheim/start_rnebular_valheim.sh`
 
-## copy service to systemctl
-sudo cp valheim.service /etc/systemd/system
-sudo systemctl start valheim
+## upload valheim service file to s3
+- `aws s3 cp .\valheim.service s3://8dot3/valheim/valheim.service`
 
-## wait 15 seconds, then check status
-sudo systemctl status valheim
 
 
 ### If using an extra volume
