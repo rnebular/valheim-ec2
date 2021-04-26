@@ -12,12 +12,8 @@ https://github.com/lloesche/valheim-server-docker
 ## "user data" scripting (basically stuff to run on fresh instance):
 - init.sh
 
-## edit start_rnebular_valheim.sh if needed (change password), upload to s3
-- `aws s3 cp .\start_rnebular_valheim.sh s3://8dot3/valheim/start_rnebular_valheim.sh`
-
-## upload valheim service file to s3
-- `aws s3 cp .\valheim.service s3://8dot3/valheim/valheim.service`
-
+## edit start_rnebular_valheim.sh if needed (change password), upload to s3 (run script locally)
+- setup-s3.ps1
 
 
 ### If using an extra volume
