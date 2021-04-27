@@ -15,10 +15,12 @@ https://github.com/lloesche/valheim-server-docker
 ## edit start_rnebular_valheim.sh if needed (change password), upload to s3 (run script locally)
 - setup-s3.ps1
 
-### Worlds Backups
+### Worlds Backups - Need to make this work and test
 - Create backups of worlds folder on schedule (dest folder ~/valheim-backups/worlds)
 - Copy world backups to s3
 
+
+## NOTE TO SELF: DON'T AUTHOR BASH SCRIPTS ON WINDOWS AND EXPECT AWESOMENESS
 
 
 ### If using an extra volume
