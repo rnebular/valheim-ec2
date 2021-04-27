@@ -17,10 +17,15 @@ sudo wget 'https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.g
 # Unpack SteamCMD
 sudo tar -xzvf steamcmd_linux.tar.gz && rm -f steamcmd_linux.tar.gz
 
+export templdpath=$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=./linux64:$LD_LIBRARY_PATH
+export SteamAppId=892970
+
 # Launch SteamCMD and update Valheim (gameid=896660)
 sudo ./steamcmd.sh +login anonymous +force_install_dir /games/Valheim +app_update 896660 validate +quit
 
 # copy server start script and systemctl service files from s3
+cd ~
 aws s3 cp s3://8dot3/valheim . --recursive
 sudo chmod +x valheim.service
 sudo chmod +x start_rnebular_valheim.sh

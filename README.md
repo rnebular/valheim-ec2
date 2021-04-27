@@ -15,6 +15,11 @@ https://github.com/lloesche/valheim-server-docker
 ## edit start_rnebular_valheim.sh if needed (change password), upload to s3 (run script locally)
 - setup-s3.ps1
 
+### Worlds Backups
+- Create backups of worlds folder on schedule (dest folder ~/valheim-backups/worlds)
+- Copy world backups to s3
+
+
 
 ### If using an extra volume
 Format and mount game storage drive, if using another volume for storage Your device name might be something other than /dev/xvdb, so edit the lines accordingly:
